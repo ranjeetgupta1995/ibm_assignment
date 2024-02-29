@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+    <div id="box">
+        <div class="btn">
+            <button id="prev"><</button>
+        </div>
+        <div class="image">
+            <img src="" alt="" />
+            <div class="position">
+                <div id="0" class="round"></div>
+                <div id="1" class="round"></div>
+                <div id="2" class="round"></div>
+            </div>
+        </div>
+        <div class="btn">
+            <button id="next">></button>
+        </div>
+    </div>
+</body>
+
+<script>
+    let imageEl = document.querySelector("img");
+    let activeId = document.getElementsByClassName("round").id;
+    let prev = document.getElementById("prev");
+    let next = document.getElementById("next");
+
+
+    let imgArr = ["https://i.pinimg.com/736x/20/5c/dd/205cdd4c41b489cd31251d646db81efa.jpg", "https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=612x612&w=0&k=20&c=MGd2-v42lNF7Ie6TtsYoKnohdCfOPFSPQt5XOz4uOy4=", "https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=600"]
+
+    let imageIndex = 0;
+
+    imageEl.setAttribute("src", imgArr[imageIndex])
+
+    prev.addEventListener("click", () => {
+        imageIndex--;
+        if(imageIndex===-1){
+            imageIndex=imgArr.length-1;
+        }
+        imageEl.setAttribute("src", imgArr[imageIndex])
+    })
+
+    next.addEventListener("click", () => {
+        imageIndex++;
+        if(imageIndex===imgArr.length){
+            imageIndex=0;
+        }
+        imageEl.setAttribute("src", imgArr[imageIndex])
+    })
+
+</script>
+</html>

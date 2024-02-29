@@ -1,0 +1,53 @@
+
+#box{
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    background-color: gray;
+    display: flex;
+}
+
+.image{
+    margin: auto;
+    border: 5px solid white;
+    width: 600px;
+    height: 400px;
+}
+
+img{
+    width: 600px;
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    margin: auto;
+}
+
+#prev {
+    color: white;
+    background-color: gray;
+    font-size: xx-large;
+    border: none;
+}
+
+#next {
+    color: white;
+    background-color: gray;
+    font-size: xx-large;
+    border: none;
+}
+
+.position{
+    width: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.round{
+    border: 1.5px solid white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
